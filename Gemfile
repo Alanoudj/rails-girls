@@ -8,7 +8,10 @@ gem 'devise'
 
 # Use sqlite3 as the database for Active Record
 gem 'sqlite3', group: [:development, :test]
-gem 'pg', group: [:production]
+group :production do
+  gem 'pg'
+  gem 'rails_12factor'
+end
 
 #Classier solution for file uploads for Rails, Sinatra and other Ruby web frameworks
 gem 'carrierwave'
